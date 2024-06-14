@@ -1,0 +1,49 @@
+.Father_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(34, 139, 34, 0.91);
+}
+.login_form {
+    padding: 0px 10px 10px 10px;
+    border:none;
+    width: 200px;
+    height: 250px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+p{
+    width: 200px;
+    padding-left: 30px;
+}
+
+.input{
+    width: 170px;
+    height: 35px;
+    border: none;
+    background: rgba(128, 128, 128, 0.34);
+    border-radius: 8px;
+}
+.input::placeholder{
+    font-family: 'Kanit' sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.66);
+    padding-left: 10px;
+}
+.btn{
+    width: 170px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background: green;
+    font-family: 'Kanit' sans-serif;
+    font-weight: 800;
+}
