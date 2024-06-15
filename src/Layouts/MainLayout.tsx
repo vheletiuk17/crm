@@ -1,10 +1,10 @@
 import React from 'react';
-import {Login} from "../Components/LoginContainer/Login";
+import {Outlet} from "react-router";
 
 const MainLayout = () => {
     return (
         <div>
-            <Login/>
+            <Outlet/>
         </div>
     );
 };

@@ -6,7 +6,8 @@ const orders = '/api/v1/orders'
 const urls = {
     auth:{
         login:auth,
-        refresh:`/api/vi/auth/refresh`
+        refresh:`/api/vi/auth/refresh`,
+        me: `${auth}/me`
     }
 }
 

@@ -16,6 +16,17 @@ const authsService = {
 
     },
 
+    async getUserData(): Promise<IUser> {
+        const accessToken = this.getAccessToken();
+        const { data } = await apiServices.get(urls.auth.me, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
+        console.log(data);
+        return data;
+    },
+
     async refresh():Promise<void>{
         const refreshToken = this.getRefreshToken();
        const {data} = await  apiServices.post(urls.auth.refresh, {refresh:refreshToken})
@@ -26,12 +37,14 @@ const authsService = {
         localStorage.setItem(accessTokenKey, access)
         localStorage.setItem(refreshTokenKey, refresh)
     },
+
     getAccessToken():string{
 
         return localStorage.getItem(accessTokenKey)
     },
+
     getRefreshToken():string{
-   
+
         return localStorage.getItem(refreshTokenKey)
     }
 }

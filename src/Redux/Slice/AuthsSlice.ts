@@ -4,12 +4,12 @@ import {IAuth} from "../../Interfaces/authInterface";
 import {authsService} from "../../Services/loginService";
 
 interface IState{
-    me:IUser
-    error: boolean
+    me:IUser | null,
+    error: boolean | null
 }
 
 const initialState = {
-    me:null,
+    me: null,
     error: null
 }
 
